@@ -14,7 +14,7 @@
             <li><a href="#pokedex">Pokedex</a></li>
             <li><a href="#types">Types</a></li>
             <li><a href="#about">About</a></li>
-            <li><a href="#login">Login</a></li>
+            <li><a href="#auth">Account</a></li>
             <input type="text" class="nav-search" placeholder="Search Pokemon...">
             <button class="nav-button">search</button>
         </ul>
@@ -109,23 +109,45 @@
             </p>
         </section>
 
-        <!-- Login Section -->
-        <section id="login">
-            <h2>Login</h2>
-            <form>
-                <label for="username">Username:</label>
-                <input type="text" id="username" name="username" placeholder="Enter your username"><br>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" placeholder="Enter your email"><br>
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password" placeholder="Enter your password"><br>
-                <button type="submit">Login</button>
-            </form>
+        <!-- Combined Auth Section (Login + Sign Up) -->
+        <section id="auth">
+            <div class="auth-tabs">
+                <button class="tab active" data-target="login-form" aria-pressed="true">Login</button>
+                <button class="tab" data-target="signup-form" aria-pressed="false">Sign Up</button>
+            </div>
+            <div class="auth-forms">
+                <form id="login-form" class="auth-form">
+                    <h2>Login</h2>
+                    <label for="login-username">Username:</label>
+                    <input type="text" id="login-username" name="username" placeholder="Enter your username"><br>
+                    <label for="login-email">Email:</label>
+                    <input type="email" id="login-email" name="email" placeholder="Enter your email"><br>
+                    <label for="login-password">Password:</label>
+                    <input type="password" id="login-password" name="password" placeholder="Enter your password"><br>
+                    <button type="submit">Login</button>
+                </form>
+
+                <form id="signup-form" class="auth-form hidden">
+                    <h2>Sign Up</h2>
+                    <label for="signup-firstname">First Name:</label>
+                    <input type="text" id="signup-firstname" name="firstname" placeholder="Enter your first name" required><br>
+                    <label for="signup-lastname">Last Name:</label>
+                    <input type="text" id="signup-lastname" name="lastname" placeholder="Enter your last name" required><br>
+                    <label for="signup-email">Email:</label>
+                    <input type="email" id="signup-email" name="email" placeholder="Enter your email" required><br>
+                    <label for="signup-password">Password:</label>
+                    <input type="password" id="signup-password" name="password" placeholder="Set your password" required><br>
+                    <div id="signup-error" class="form-error" aria-live="polite"></div>
+                    <p id="signup-success" class="success-message" style="display:none;" aria-live="polite"></p>
+                    <button type="submit">Sign Up</button>
+                </form>
+            </div>
         </section>
     </main>
     <!-- footer section-->
     <footer>
         <p>&copy; 2023 Pokémon. All rights reserved.</p>
     </footer>
+    <script src="index.js"></script>
 </body>
 </html>

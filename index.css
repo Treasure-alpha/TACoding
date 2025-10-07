@@ -171,10 +171,10 @@ section {
 }
 
 #login {
-    background: #e3f2fd;
+    background: #eaedf0;
     border-radius: 10px;
     padding: 1.5rem;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+    box-shadow: 0 1px 4px rgba(100, 44, 44, 0.04);
     max-width: 350px;
     margin: 0 auto;
 }
@@ -187,20 +187,20 @@ section {
 
 #login label {
     font-weight: bold;
-    color: #1976d2;
+    color: black;
 }
 
 #login input[type="text"],
 #login input[type="password"],
 #login input[type="email"] {
     padding: 0.5rem;
-    border: 1px solid #90caf9;
+    border: 1px solid black;
     border-radius: 5px;
     font-size: 1rem;
 }
 
 #login button[type="submit"] {
-    background: #1976d2;
+    background: #ffd600;
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -212,8 +212,105 @@ section {
 }
 
 #login button[type="submit"]:hover {
-    background: #1565c0;
+    background: #6d5b04;
 }
+
+#signup {
+    background: #eaedf0;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 1px 4px rgba(100, 44, 44, 0.04);
+    max-width: 350px;
+    margin: 0 auto;
+}
+#signup form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+#signup label {
+    font-weight: bold;
+    color: black;
+}
+#signup input[type="text"],
+#signup input[type="password"],
+#signup input[type="email"] {
+    padding: 0.5rem;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+#signup button[type="submit"] {
+    background: #ffd600;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+#signup button[type="submit"]:hover {
+    background: #6d5b04;
+}
+
+.form-error {
+    color: #b00020;
+    margin: 0.25rem 0 0.75rem 0;
+    font-size: 0.95rem;
+}
+
+.success-message {
+    color: #075e1a;
+    background: #e6f4ea;
+    padding: 0.5rem;
+    border-radius: 6px;
+    margin-bottom: 0.75rem;
+}
+
+/* Combined auth (login / signup) styles */
+#auth {
+    background: #eaedf0;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 1px 6px rgba(0,0,0,0.04);
+    max-width: 420px;
+    margin: 0 auto;
+}
+.auth-tabs {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+.auth-tabs .tab {
+    flex: 1;
+    padding: 0.5rem 0.75rem;
+    border: none;
+    border-radius: 8px;
+    background: #fff;
+    cursor: pointer;
+    font-weight: bold;
+}
+.auth-tabs .tab.active {
+    background: #ffd600;
+    color: #fff;
+}
+.auth-forms {
+    position: relative;
+}
+.auth-form {
+    display: block;
+}
+.hidden {
+    display: none !important;
+}
+.auth-form input[type="text"], .auth-form input[type="email"], .auth-form input[type="password"] {
+    width: 100%;
+    box-sizing: border-box;
+}
+
 
 footer {
     text-align: center;
