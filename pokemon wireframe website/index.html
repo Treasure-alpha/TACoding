@@ -15,15 +15,17 @@
             <li><a href="#types">Types</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#auth">Account</a></li>
-            <input type="text" class="nav-search" placeholder="Search Pokemon...">
-            <button class="nav-button">search</button>
         </ul>
+        <div class="nav-search-wrap">
+            <input type="text" id="nav-search" class="nav-search" placeholder="Search Pokemon...">
+            <button id="nav-search-btn" class="nav-button">search</button>
+        </div>
     </nav>
-    <main class="#home">
+    <main>
         <!-- Home Section -->
         <section id="home">
             <h1>Welcome to the Pokémon World</h1>
-            <p>Explore the various Pokémon species and their types.</p>
+            <p>Explore the various Pokémon species and their types.Dive deep into the data that matters. From base stats, typing, and abilities to EV spreads, viable movesets, tier placements, and meta relevance—this Pokédex is built for competitive battlers who need precision. Whether you're prepping for Ranked Battles, Smogon tiers, or VGC formats, you'll find the tools and insights here to optimize your team and stay ahead of the meta.</p>
         </section>
 
         <!-- Pokedex Section -->
@@ -60,8 +62,6 @@
                 <li>Togekiss - Fairy/Flying</li>
                 <li>Scizor - Bug/Steel</li>
                 <li>Gyarados - Water/Flying</li>
-                <li>Lucario - Fighting/Steel</li>
-                <li>Bulbasaur - Grass/Poison</li>
                 <!-- Add more Pokémon as needed -->
             </ul>
         </section>
@@ -95,18 +95,19 @@
         <!-- About Section -->
         <section id="about">
             <h2>About</h2>
-            <p>Welcome to Pokémon World - Your Ultimate Pokémon Companion!
+            <p>
+                Welcome to Pokémon World - Your Ultimate Pokémon Companion!
                 Whether you're a seasoned Trainer or just starting your journey, Pokémon World is your go-to source for exploring the vast world of Pokémon. Dive into detailed information on every Pokémon across all generations - including types, evolutions, abilities, stats, and more!
                 Our mission is to make it easy and fun to discover, learn, and master everything about the Pokémon universe. From classic favorites to the latest additions, you'll find everything you need to build the perfect team, plan your strategies, or simply satisfy your curiosity.
-                <ul class="features-list">
-                    <li><b>Features:</b></li>
-                    <li>Full Pokédex entries for every known Pokémon</li>
-                    <li>Stats, abilities, and evolution paths</li>
-                    <li>Region-specific data from Kanto to Paldea</li>
-                    <li>Advanced search and filtering tools</li>
-                    <li>Helpful guides for new and veteran Trainers</li>
-                </ul>
             </p>
+            <ul class="features-list">
+                <li><strong>Features:</strong></li>
+                <li>Full Pokédex entries for every known Pokémon</li>
+                <li>Stats, abilities, and evolution paths</li>
+                <li>Region-specific data from Kanto to Paldea</li>
+                <li>Advanced search and filtering tools</li>
+                <li>Helpful guides for new and veteran Trainers</li>
+            </ul>
         </section>
 
         <!-- Combined Auth Section (Login + Sign Up) -->
@@ -135,6 +136,14 @@
                     <input type="text" id="signup-lastname" name="lastname" placeholder="Enter your last name" required><br>
                     <label for="signup-email">Email:</label>
                     <input type="email" id="signup-email" name="email" placeholder="Enter your email" required><br>
+                    <label for="signup-age">Age:</label>
+                    <input type="number" id="signup-age" name="age" placeholder="Enter your age" required><br>
+                    <label for="signup-gender">Gender:</label>
+                        <select id="signup-gender">
+                            <option value="" disabled selected>Select your gender</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                        </select>
                     <label for="signup-password">Password:</label>
                     <input type="password" id="signup-password" name="password" placeholder="Set your password" required><br>
                     <div id="signup-error" class="form-error" aria-live="polite"></div>
